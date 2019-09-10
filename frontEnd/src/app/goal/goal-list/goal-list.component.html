@@ -1,0 +1,35 @@
+
+      
+      <div class="cont_principal">
+        <div class="cont_centrar">
+          <div class="cont_todo_list_top">
+              <div class="cont_titulo_cont">
+                <h3>SORT YOUR LIFE</h3>
+              </div>
+            <div class="cont_add_titulo_cont">
+              <a (click)='appendEdit = !appendEdit'>
+                <i class="material-icons">+</i>
+              </a>
+            </div>
+            <!--   End cont_todo_list_top  --> 
+          </div>
+        <!--   End cont_central  -->
+        </div>
+      </div>
+ <app-goal-edit
+ *ngIf='appendEdit'
+></app-goal-edit> 
+<div class="cont_principal">
+  <div class="cont_centrar">
+    <div class="row">
+        <div class="col-xl-12">
+                <app-goal-item
+                *ngFor="let goalEl of goals"
+                [goal]="goalEl">
+                ></app-goal-item>
+            </div>
+    </div>
+  </div>
+</div>
+
+

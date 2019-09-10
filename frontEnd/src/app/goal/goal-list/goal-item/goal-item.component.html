@@ -1,0 +1,64 @@
+<div style="overflow-y: hidden" class="cont_princ_lists">
+    <ul>
+      <li class="list_{{goal.goalSection}} ">
+        <div class="col_md_1_list">
+          <p>{{section(goal.goalSection)}}</p>
+        </div>
+          <div class="col_md_2_list">
+            <h4>{{goal.goalName}}</h4>
+            <p>{{goal.description}}</p>
+          </div>
+          <div class="delete">
+          <a (click)="delete(goal.goalID)">
+              <i><span>X</span>
+              </i>
+            </a>  
+          </div>
+          <div class="col_md_3_list">
+            <div class="cont_text_status">
+              <p>{{goal.status}}</p>   
+            </div>   
+             
+            <div *ngIf="goal.status=='NotYet'" class="col_md_1_list cont_btns_options">
+              <ul>
+                <li>
+                  <a (click)="MakeItDone(goal.goalID)">
+                    <i class="material-icons"><span>&#10003;</span>
+                    </i>
+                  </a>
+                </li>
+              </ul>    
+            </div>
+          </div>
+          <!-- <div class="col_md_3_list">
+          <div class="cont_text_status">
+              <p>Notyet</p>      
+          </div>
+          </div> -->
+      </li>
+      <!-- <li class="list_work_employement">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_money">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_relationship">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_community">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_religion">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_place_to_live">
+          <div class="col_md_1_list"></div>
+      </li>
+      <li class="list_self_development">
+          <div class="col_md_1_list"></div>
+      </li> -->
+
+  
+    </ul>
+    <!--   End cont_todo_list_top  -->   
+  </div>

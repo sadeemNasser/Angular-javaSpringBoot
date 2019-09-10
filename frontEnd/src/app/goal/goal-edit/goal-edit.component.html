@@ -1,0 +1,75 @@
+<div class="cont_principal">
+  <div class="cont_centrar">
+    <div class="cont_crear_new">
+      <form 
+      [formGroup]="GoalForm"
+      (ngSubmit)="onSubmit()">
+        <table class="table">
+            <tr>
+              <th>Section</th>
+              <th>Title</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>
+                  <select id="goalSection" formControlName="goalSection" #goalSection>
+                    <option id="0" value="0">HEALTH</option>
+                    <option id="1" value="1">WORK & EMPLOYEMENT</option> 
+                    <option id="2" value="2">MONEY</option> 
+                    <option id="3" value="3">RELATIONSHIP</option> 
+                    <option id="4" value="4">COMMUNITY</option>
+                    <option id="5" value="5">RELIGION</option> 
+                    <option id="6" value="6">PLACE TO LIVE</option> 
+                    <option id="7" value="7">SELF DEVELOPMENT</option> 
+                  </select>
+              </td> 
+              <td>
+                    <input 
+                    type="text" 
+                    class="form-control input_title_desc"
+                    id="goalName"
+                    formControlName="goalName"
+                    #goalName/>   
+
+              </td>
+              <td>
+                <select class="input_description_title"  id="status" formControlName="status" #status>
+                  <option value="0">Notyet</option>
+                  <option value="1">Done</option>       
+                </select>
+            
+              </td>
+            </tr>
+            <tr>
+              <th class="titl_description" >Description</th>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <input 
+                type="text" 
+                class="form-control input_description"
+                id="description"
+                formControlName="description"
+                #description/>  
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <button 
+                type="submit"
+                class="btn_add_fin"
+                [disabled]="!GoalForm.valid"
+                > ADD </button>
+                <button 
+                type="submit"
+                class="btn_add_fin"
+                (click)="onCancel()"> Cancel </button>
+              </td>
+            </tr>
+            
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+
